@@ -1,0 +1,27 @@
+<nav class="bg-blue-600 text-white p-4 flex items-center justify-between">
+  <div class="text-xl font-bold">MySite</div>
+
+  <!-- Desktop menu -->
+  <div class="hidden md:flex gap-6">
+    {{#link-to "home" class="hover:underline"}}Home{{/link-to}}
+    {{#link-to "panel" class="hover:underline"}}Panel{{/link-to}}
+    {{#link-to "contact" class="hover:underline"}}Contact Us{{/link-to}}
+  </div>
+
+  <!-- Mobile menu button -->
+  <button class="md:hidden" onclick={{fn this.toggleMenu}}>
+    ☰
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+{{#if this.menuOpen}}
+  <div class="bg-blue-500 text-white flex flex-col p-4 gap-4 md:hidden">
+    {{#link-to "home" class="hover:underline" onclick=this.closeMenu}}Home{{/link-to}}
+    {{#link-to "panel" class="hover:underline" onclick=this.closeMenu}}Panel{{/link-to}}
+    {{#link-to "contact" class="hover:underline" onclick=this.closeMenu}}Contact Us{{/link-to}}
+  </div>
+{{/if}}
+
+<hr>
+{{outlet}}
