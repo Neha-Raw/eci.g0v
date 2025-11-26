@@ -217,3 +217,12 @@ strong{
   #headingProposal .accordion-button {
     font-size: 2rem;
   }
+
+   .move-arrow {
+    display: inline-block;
+    transition: transform 0.2s ease; /* smooth movement */
+  }
+
+  a:hover .move-arrow {
+    transform: translateX(4px); /* arrow thoda right move hoga */
+  }
