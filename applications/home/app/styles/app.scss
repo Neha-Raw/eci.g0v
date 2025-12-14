@@ -221,23 +221,23 @@ strong{
 
    .move-arrow {
     display: inline-block;
-    transition: transform 0.2s ease; /* smooth movement */
+    transition: transform 0.2s ease;
   }
 
   a:hover .move-arrow {
-    transform: translateX(4px); /* arrow thoda right move hoga */
+    transform: translateX(4px);
   }
 
   .same-height-video {
-    height: 250px;       /* ← yaha aap value change kar sakti ho */
-    object-fit: cover;   /* video ko same size banata hai */
+    height: 250px;
+    object-fit: cover;
     width: 100%;
   }
 
   .fb-video-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 ratio */
+    padding-bottom: 56.25%;
     height: 0;
   }
 
